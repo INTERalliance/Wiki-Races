@@ -44,7 +44,7 @@ Then, run the server:
 docker compose up
 # to detach output for deployment on server
 docker compose up -d
-# to rebuild after making chainges
+# to rebuild after making changes
 docker compose build && docker compose up
 # to shut down
 docker compose down
