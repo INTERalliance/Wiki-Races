@@ -346,7 +346,7 @@ document.getElementById("restart").addEventListener("click", loadClient);
 // TODO - Run on Iframe start to load, not completion.
 frame.addEventListener("load", async () => {
 	const page = parseLevelFromString(frame.contentWindow.location.pathname);
-	if (page === settings.endPage) {
+	if (page.toLowerCase().replaceAll(" ", "_") === settings.endPage.toLowerCase().replaceAll(" ", "_")) {
 		submit();
 	}
 	totalLinks++;
